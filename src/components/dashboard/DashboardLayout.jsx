@@ -6,7 +6,7 @@ import { LayoutDashboard, CalendarCheck, CalendarDays, FileText, Megaphone, User
 import { useState } from "react"
 
 const nav = [
-  { to: "/dashboard", label: "Overview", icon: LayoutDashboard, exact: true },
+  { to: "/dashboard", label: "Dashboard", icon: LayoutDashboard, exact: true },
   { to: "/dashboard/events", label: "Events", icon: Megaphone },
   { to: "/dashboard/schedules", label: "Schedules", icon: CalendarDays },
   { to: "/dashboard/results", label: "Results", icon: FileText },

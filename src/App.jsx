@@ -115,6 +115,8 @@ import Results from "./pages/dashboard/Results"
 import GeneralInfo from "./pages/dashboard/GeneralInfo"
 import Users from "./pages/dashboard/Users"
 import { ToastProvider } from "./context/ToastContext"
+import Dashboard from "./pages/dashboard/Dashboard"
+import StudentDashboard from "./pages/StudentDashboard"
 
 const ProtectedRoute = ({ children }) => {
   const { isAuthenticated, loading } = useAuth()
@@ -191,6 +193,16 @@ function App() {
                   </ProtectedRoute>
                 }
               />
+              <Route
+                path="/studentdashboard"
+                element={
+                  <ProtectedRoute>
+                    <ChatProvider>
+                      <StudentDashboard />
+                    </ChatProvider>
+                  </ProtectedRoute>
+                }
+              />
               {/* Dashboard routes (protected, admin/CR) */}
               <Route
                 path="/dashboard"
@@ -200,13 +212,14 @@ function App() {
                   </ProtectedRoute>
                 }
               >
-                <Route index element={<Overview />} />
+                <Route index element={<Dashboard />} />
                 <Route path="events" element={<Events />} />
                 <Route path="schedules" element={<Schedules />} />
                 <Route path="results" element={<Results />} />
                 <Route path="general-info" element={<GeneralInfo />} />
                 <Route path="users" element={<Users />} />
-                
+                // In your dashboard routing
+
               </Route>
               <Route path="*" element={<Navigate to="/" />} />
             </Routes>
