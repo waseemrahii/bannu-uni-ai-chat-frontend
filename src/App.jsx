@@ -206,6 +206,7 @@ function App() {
                 <Route path="results" element={<Results />} />
                 <Route path="general-info" element={<GeneralInfo />} />
                 <Route path="users" element={<Users />} />
+                
               </Route>
               <Route path="*" element={<Navigate to="/" />} />
             </Routes>
