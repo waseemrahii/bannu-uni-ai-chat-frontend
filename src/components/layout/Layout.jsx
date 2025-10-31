@@ -30,7 +30,7 @@ export default function Layout({ children }) {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       {!isChat && !isDashboard && <Navbar />}
-      <main className="flex-1 px-4 sm:px-6 lg:px-8 pb-safe">{children}</main>
+      <main className="flex-1   pb-safe">{children}</main>
       {!isChat && !isDashboard && <Footer />}
     </div>
   )
