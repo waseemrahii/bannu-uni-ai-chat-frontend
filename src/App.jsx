@@ -55,7 +55,7 @@ function App() {
 
     <ErrorBoundary>
       <AuthProvider>
-        <Router basename="/rag">
+        <Router>
           <Layout>
             <Routes>
               <Route path="/" element={<Home />} />
