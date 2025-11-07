@@ -346,7 +346,7 @@
 
 
 // //////////// spech
-
+// src/components/chat/MessageInput.jsx
 import { useState, useCallback, useEffect } from "react"
 import { useChat } from "../../context/ChatContext"
 import { useAuth } from "../../context/AuthContext"
